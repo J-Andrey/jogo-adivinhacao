@@ -19,7 +19,7 @@ entradaElemento.addEventListener("keypress", (event) => {
 // Sobe a div quando teclado virtual aparece no celular
 entradaElemento.addEventListener("focus", () => {
     if (window.innerWidth <= 480) {
-        container.style.top = "-100px";
+        container.style.top = "-50px";
     }
 });
 
