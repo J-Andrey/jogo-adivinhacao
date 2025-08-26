@@ -32,6 +32,8 @@ body {
     width: 100%;
     max-width: 400px;
     text-align: center;
+    position: relative; /* permite mover a div para cima no mobile */
+    transition: top 0.3s ease;
 }
 
 h1 {
@@ -50,8 +52,8 @@ p {
    Input
 ========================= */
 input[type="number"] {
-    width: 100%;        /* ocupa toda a largura possível */
-    max-width: 200px;   /* limita para não ficar enorme no desktop */
+    width: 100%;
+    max-width: 200px;
     height: 40px;
     border-radius: 8px;
     border: 2px solid #333;
@@ -61,7 +63,6 @@ input[type="number"] {
     margin-bottom: 30px;
     transition: all 0.3s ease;
 }
-
 
 input[type="number"]:focus {
     outline: none;
@@ -118,7 +119,8 @@ button:active {
     }
 
     input[type="number"] {
-        width: 200px;
+        width: 100%;
+        max-width: 200px;
         height: 35px;
         font-size: 0.9rem;
     }

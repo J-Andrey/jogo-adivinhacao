@@ -4,6 +4,7 @@ let tentativas = 0;
 const entradaElemento = document.getElementById("entrada");
 const resultado = document.getElementById("resultado");
 const btnVerificar = document.getElementById("verificar");
+const container = document.querySelector(".container");
 
 // Evento do botão
 btnVerificar.addEventListener("click", verificarNumero);
@@ -12,6 +13,19 @@ btnVerificar.addEventListener("click", verificarNumero);
 entradaElemento.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
         verificarNumero();
+    }
+});
+
+// Sobe a div quando teclado virtual aparece no celular
+entradaElemento.addEventListener("focus", () => {
+    if (window.innerWidth <= 480) {
+        container.style.top = "-100px";
+    }
+});
+
+entradaElemento.addEventListener("blur", () => {
+    if (window.innerWidth <= 480) {
+        container.style.top = "0";
     }
 });
 
@@ -27,7 +41,7 @@ function verificarNumero() {
     }
 
     tentativas++;
-    
+
     if (chute === numeroSecreto) {
         resultado.textContent = `🎉 Parabéns! Você acertou o número secreto em ${tentativas} tentativas!`;
         resultado.style.color = "green";
@@ -39,7 +53,6 @@ function verificarNumero() {
         resultado.style.color = "red";
     }
 
-    // Limpa input e foca novamente para celular
     entradaElemento.value = "";
     entradaElemento.focus();
 }
