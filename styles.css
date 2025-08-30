@@ -36,14 +36,14 @@ body {
     transition: top 0.3s ease;
 }
 
-h1 {
+h2 {
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     color: #222;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 25px;
     color: #333;
 }
@@ -96,10 +96,25 @@ button:active {
 /* =========================
    Resultado
 ========================= */
+/* Resultado com animação */
 #resultado {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #222;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #222;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+#resultado.animar {
+  transform: scale(1.1);
+}
+
+#verificar {
+    margin-bottom: 25px;
+}
+
+#reiniciar {
+    background-color: #09d636;
+    color: #fff;
 }
 
 /* =========================
