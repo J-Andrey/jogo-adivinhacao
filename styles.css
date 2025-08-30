@@ -125,12 +125,13 @@ button:active {
         padding: 25px 20px;
     }
 
-    h1 {
-        font-size: 1.6rem;
+    h2 {
+        font-size: 0.9rem;
     }
 
     p, #resultado {
         font-size: 1rem;
+        margin-bottom: 25px;
     }
 
     input[type="number"] {
