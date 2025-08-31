@@ -127,7 +127,7 @@ button:active {
     }
 
     h2 {
-        font-size: clamp(1.2rem, 6vw, 1.6rem);
+        font-size: clamp(1rem, 5vw, 1.4rem);
         margin-bottom: 20px;
     }
     
